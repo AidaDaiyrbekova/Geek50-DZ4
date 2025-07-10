@@ -54,14 +54,14 @@ requestAnimationFrame(moveRedBlock);
  const startBtn = document.querySelector("#start")
 const stopBtn = document.querySelector("#stop")
 const resetBtn  = document.querySelector("#reset")
-const coutText  = document.querySelector("#seconds")
+const countText  = document.querySelector("#seconds")
 
 let count = 0
 let interval =0
 
 function incCounter (){
         count++
-        coutText.textContent = count
+        countText.textContent = count
 }
 
 startBtn.onclick = () => {
@@ -84,7 +84,7 @@ stopBtn.onclick = () => {
 resetBtn.onclick = () => {
     function resetCounter() {
         count = 0
-        coutText.textContent = count
+        countText.textContent = count
 
     }
     resetCounter()
