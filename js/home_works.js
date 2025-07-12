@@ -82,11 +82,7 @@ stopBtn.onclick = () => {
 }
 
 resetBtn.onclick = () => {
-    function resetCounter() {
+        clearInterval(interval)
         count = 0
         countText.textContent = count
-
-    }
-    resetCounter()
 }
-
