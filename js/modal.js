@@ -24,19 +24,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function bottom() {
-        const scrollY = window.scrollY;
-        const viewportHeight = window.innerHeight;
-        const pageHeight = document.documentElement.scrollHeight;
+        const scrollY = window.scrollY
+        const viewportHeight = window.innerHeight
+        const pageHeight = document.documentElement.scrollHeight
 
-        return scrollY + viewportHeight >= pageHeight-5;
+        return scrollY + viewportHeight >= pageHeight-5
     }
 
     function onScroll() {
         if (bottom()) {
             openModal()
-            window.removeEventListener('scroll', onScroll);
+            window.removeEventListener('scroll', onScroll)
         }
     }
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener('scroll', onScroll)
 })
 
