@@ -63,6 +63,7 @@ autoSlider()
 // CONVERTER
 const somInput = document.querySelector('#som')
 const usdInput = document.querySelector('#usd')
+const eurInput = document.querySelector('#eur')
 
 const converter = (element) => {
     element.oninput = () => {
@@ -75,20 +76,30 @@ const converter = (element) => {
             const data = JSON.parse((xhr.response))
             if(element.id === 'som'){
                 usdInput.value = (element.value / data.usd).toFixed(2)
+                eurInput.value = (element.value / data.euro).toFixed(2)
             }
 
             if(element.id === 'usd'){
                 somInput.value = (element.value * data.usd).toFixed(2)
+                eurInput.value = (element.value * data.toEur).toFixed(2)
             }
+
+            if(element.id === 'eur'){
+                somInput.value = (element.value * data.euro).toFixed(2)
+                usdInput.value = (element.value * data.toUsd).toFixed(2)
+            }
+
             if(element.value === ''){
                 somInput.value = ''
                 usdInput.value = ''
+                eurInput.value = ''
             }
         }
     }
 }
 converter(somInput)
 converter(usdInput)
+converter(eurInput)
 
 // ПРИНЦИПЫ
 // DRY - don't repeat yourself
