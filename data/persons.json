@@ -1,0 +1,24 @@
+[
+  {
+  "name": "Покахонтас",
+  "age": 18,
+  "photo": "https://cs9.pikabu.ru/post_img/big/2019/07/14/11/1563128614178225255.jpg"
+  },
+
+  {
+    "name": "Ариель",
+    "age": 13,
+    "photo": "https://24smi.org/public/media/person/2017/12/25/3mipvo1krojv-rusalochka-ariel.jpg"
+  },
+
+  {
+    "name": "Бель",
+    "age": 20,
+    "photo": "https://twam.ru/wp-content/uploads/2024/02/printsessa-bell-12.webp"
+  },
+  {
+    "name": "Мулан",
+    "age": 19,
+    "photo": "https://lumiere.su/wp-content/uploads/2023/05/mulan_cover.jpg"
+  }
+]

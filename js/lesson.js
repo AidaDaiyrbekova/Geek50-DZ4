@@ -60,5 +60,39 @@ const autoSlider = (i = 0) => {
 autoSlider()
 
 
+// CONVERTER
+const somInput = document.querySelector('#som')
+const usdInput = document.querySelector('#usd')
 
+const converter = (element) => {
+    element.oninput = () => {
+        const xhr = new XMLHttpRequest()
+    xhr.open('GET', '../data/converter.json')
+    xhr.setRequestHeader('Content-type', 'application/json')
+    xhr.send()
 
+        xhr.onload = () => {
+            const data = JSON.parse((xhr.response))
+            if(element.id === 'som'){
+                usdInput.value = (element.value / data.usd).toFixed(2)
+            }
+
+            if(element.id === 'usd'){
+                somInput.value = (element.value * data.usd).toFixed(2)
+            }
+            if(element.value === ''){
+                somInput.value = ''
+                usdInput.value = ''
+            }
+        }
+    }
+}
+converter(somInput)
+converter(usdInput)
+
+// ПРИНЦИПЫ
+// DRY - don't repeat yourself
+// KISS - keep it simple, stupid
+// SOLID -
+// BEM -
+// FSD.MVC.MVP.MVVM

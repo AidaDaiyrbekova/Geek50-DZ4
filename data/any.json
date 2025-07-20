@@ -1,0 +1,10 @@
+{
+  "name": "Скарлетт",
+  "surname": "Йоханссон",
+  "age": 40,
+  "height": 163,
+  "weight": 57,
+  "profession": "actress",
+  "status": "Married",
+  "colors": ["black", "red", "blue"]
+}

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         modal.style.display = 'block'
         document.body.style.overflow = 'hidden'
     }
-    setTimeout(openModal,10000)
+    // setTimeout(openModal,10000)
 
     const closeModal = () => {
         modal.style.display = 'none'
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     modalOpenBtn.onclick = openModal
     modalCloseBtn.onclick = closeModal
+
     modal.onclick = (event) => {
         if (event.target === modal) {
             closeModal()

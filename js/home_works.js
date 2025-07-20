@@ -86,3 +86,42 @@ resetBtn.onclick = () => {
         count = 0
         countText.textContent = count
 }
+
+// Characters
+
+const characters = document.querySelector(".characters-list")
+
+   const xhr = new XMLHttpRequest()// 1 создание запроса
+    // console.log(xhr)
+    xhr.open('GET', '../data/persons.json') // 2 указание метода и пути
+    xhr.setRequestHeader('Content-type', 'application/json') //3 указание
+    xhr.send() //4 отправка
+
+   xhr.onload = () => {
+    const data = JSON.parse(xhr.response)
+
+       data.forEach((item) => {
+           const characterСard = document.createElement("div")
+           characterСard.setAttribute('class', 'character-card ')
+           characterСard.innerHTML = `
+    <div class="character-photo" >
+        <img src="${item.photo}" alt="${item.name}">
+    </div>
+     <h3>${item.name}</h3>
+     <span style="color: white">age:${item.age}</span>
+     `
+
+           characters.append(characterСard)
+       })
+   }
+
+// Задача 2 (данные созданные самим)
+const request = new XMLHttpRequest()
+request.open('GET', '../data/any.json')
+request.setRequestHeader('Content-type', 'application/json')
+request.send()
+
+request.onload = () => {
+     const information = JSON.parse(request.response)
+    console.log(information)
+}
