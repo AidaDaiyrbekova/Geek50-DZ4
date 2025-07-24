@@ -107,3 +107,59 @@ converter(eurInput)
 // SOLID -
 // BEM -
 // FSD.MVC.MVP.MVVM
+
+//card_switcher
+
+const cardBlock = document.querySelector('.card')
+const btnNext = document.querySelector('#btn-next')
+const btnPrev = document.querySelector('#btn-prev')
+
+
+let numId = 0
+let data = []
+
+fetch(`https://jsonplaceholder.typicode.com/todos`)
+    .then(response => response.json())
+    .then(json => {
+        data = json
+        sending()
+    })
+
+const sending = () => {
+
+    const item = data[numId]
+
+    const {title, id, completed } = item
+
+            cardBlock.style.borderColor = completed ? 'green' : 'red'
+            cardBlock.innerHTML = `
+                <p>${title}</p>
+                <span>${id}</span>
+            `
+}
+
+btnNext.onclick = () => {
+    numId++
+    if(numId >= data.length){
+        numId = 0
+    }
+    sending()
+
+}
+
+btnPrev.onclick = () => {
+    numId --
+    if(numId < 0){
+        numId = data.length-1
+    }
+    sending()
+}
+// 2 задача
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+    .then((res) => res.json())
+    .then((data) => {
+            data.forEach(item => {
+                console.log(item)
+            })
+    })
