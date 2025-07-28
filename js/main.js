@@ -52,14 +52,14 @@ showSlide(index)
 
 
 const autoSlider = (i = 0) => {
-    setInterval(() => {
-        i++
-        if (i > slides.length - 1) {
-            i = 0
-        }
-        hideSlide()
-        showSlide(i)
-    }, 10000)
+    // setInterval(() => {
+    //     i++
+    //     if (i > slides.length - 1) {
+    //         i = 0
+    //     }
+    //     hideSlide()
+    //     showSlide(i)
+    // }, 10000)
 }
 
 next.onclick = () => {

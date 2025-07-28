@@ -1,54 +1,43 @@
 // email
-const gmailInput = document.querySelector("#gmail_input")
-const gmailButton = document.querySelector("#gmail_button")
-const gmailResult = document.querySelector("#gmail_result")
-
-const regExp = /^(?=[a-zA-Z0-9]{5,})[a-zA-Z0-9]*[a-zA-Z][a-zA-Z0-9]*@[^\s@]+\.[a-z]{2,3}$/
-
-gmailButton.onclick = () => {
-    if(regExp.test(gmailInput.value)){
-        gmailResult.innerHTML = "OK"
-        gmailResult.style.color = "green"
-    }else {
-        gmailResult.innerHTML = "ERROR"
-        gmailResult.style.color = "red"
-    }
-}
+// const gmailInput = document.querySelector("#gmail_input")
+// const gmailButton = document.querySelector("#gmail_button")
+// const gmailResult = document.querySelector("#gmail_result")
+//
+// const regExp = /^(?=[a-zA-Z0-9]{5,})[a-zA-Z0-9]*[a-zA-Z][a-zA-Z0-9]*@[^\s@]+\.[a-z]{2,3}$/
+//
+// gmailButton.onclick = () => {
+//     if(regExp.test(gmailInput.value)){
+//         gmailResult.innerHTML = "OK"
+//         gmailResult.style.color = "green"
+//     }else {
+//         gmailResult.innerHTML = "ERROR"
+//         gmailResult.style.color = "red"
+//     }
+// }
 
 //move block
-const childBlock = document.querySelector(".child_block")
-const parentBlock = document.querySelector(".parent_block")
+const parentBlock = document.querySelector('.parent_block');
+const childBlock = document.querySelectorAll('.child_block');
+
+childBlock.forEach((shuriken) => {
+    setInterval(() => {
+        const parentWidth = parentBlock.clientWidth;
+        const parentHeight = parentBlock.clientHeight;
+
+        const maxX = parentWidth - shuriken.offsetWidth;
+        const maxY = parentHeight - shuriken.offsetHeight;
+
+        const randomX = Math.random() * maxX;
+        const randomY = Math.random() * maxY;
+
+        shuriken.style.transition = 'top 0.6s ease, left 0.6s ease';
+        shuriken.style.left = `${randomX}px`;
+        shuriken.style.top = `${randomY}px`;
+    }, 500 + Math.random() * 1000); // случайная скорость от 500 до 1500 мс
+});
 
 
-let stepX = 0;
-let stepY = 0;
 
-
-const offsetWidth = parentBlock.clientWidth - childBlock.clientWidth
-const offsetHeight = parentBlock.clientHeight - childBlock.clientHeight
-
-let stepX2 = offsetWidth
-let stepY2 = offsetHeight
-const moveRedBlock = () => {
-
-    if (stepX < offsetWidth) {
-        stepX += 4;
-        childBlock.style.left = `${stepX}px`;
-    } else if (stepY < offsetHeight) {
-        stepY += 4;
-        childBlock.style.top = `${stepY}px`;
-    } else if (stepX2 > 0) {
-        stepX2 -= 4;
-        childBlock.style.left = `${stepX2}px`;
-    } else if (stepY2 > 0) {
-        stepY2 -= 4;
-        childBlock.style.top = `${stepY2}px`;
-    }
-
-    requestAnimationFrame(moveRedBlock);
-};
-
-requestAnimationFrame(moveRedBlock);
 
 //counter
  const startBtn = document.querySelector("#start")
@@ -60,14 +49,18 @@ let count = 0
 let interval =0
 
 function incCounter (){
-        count++
+        count+=20
         countText.textContent = count
+    if (count >= 720) {
+        clearInterval(interval);
+        interval = 0;
+    }
 }
 
 startBtn.onclick = () => {
     function startCounter (){
         if (interval !== 0) return
-        interval = setInterval(incCounter,300)
+        interval = setInterval(incCounter,100)
 
     }
      startCounter()

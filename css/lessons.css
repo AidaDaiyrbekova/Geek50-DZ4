@@ -1,36 +1,73 @@
-
+body {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('../img/konoxa.png') no-repeat center;
+    background-size: cover;
+}
 /* PHONE CHECKER */
-
-.phone_block {
-    background: black;
-    padding: 100px 0;
+.slide_photo {
+    background: rgba(255, 165, 0, 0.07);
+    padding: 60px 0;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
 }
 
-.inner_phone_block {
+.slide_photo h3 {
     margin-top: 50px;
+    text-align: center;
+    font-size: 36px;
+    color: orange;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px orange;
+}
+
+.slider-wrapper {
     display: flex;
-    justify-content: space-evenly;
-    border: 1px solid var(--orange);
-    height: 300px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.slider-container {
+    max-width: 660px;
+    overflow: hidden;
     border-radius: 20px;
-    align-items: center;
+    box-shadow: 0 0 20px orange;
 }
 
-.form_phone {
+.slider-track {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    transition: transform 0.5s ease-in-out;
 }
 
-.form_phone button {
-    width: 100%;
-    margin: 20px 0;
+.slide_card {
+    flex-shrink: 0;
+    width: 660px;
+    height: 300px;
+    background-size: cover;
+    background-position: top center;
 }
+
+.btn-slide {
+    border: none;
+    background: rgba(255, 165, 0, 0.07);
+    padding: 15px;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-slide:hover {
+    background: white;
+    color: orange;
+    box-shadow: 0 0 10px orange;
+}
+
 
 /* TAB SLIDER */
 
 .tab_slider {
-    background: black;
+    background: rgba(241, 228, 34, 0.21);
     padding: 100px 0;
 }
 
@@ -44,7 +81,13 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    height: 170px;
+    height: 200px;
+}
+.tab_content_block img {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-left: 10px;
 }
 
 .tab_content_block p {
@@ -58,6 +101,10 @@
     display: flex;
     flex-direction: column;
     row-gap: 5px;
+}
+.tab_content_items img{
+    height: 20px;
+    width: 20px;
 }
 
 .tab_content_item {
@@ -74,7 +121,8 @@
 
 .tab_content_item_active {
     background: var(--orange);
-    color: black;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background: rgba(255, 165, 0, 0.07);
     font-weight: 600;
     border: 1px solid white;
 }
@@ -89,7 +137,8 @@
 /*------CARD SWITCHER------*/
 
 .card_switcher {
-    background-color: black;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background: rgba(255, 165, 0, 0.07);
     padding: 100px 0;
 }
 
@@ -128,7 +177,8 @@
 
 .converter {
     padding: 100px 0;
-    background-color: black;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background: rgba(255, 165, 0, 0.07);
 }
 
 .inner_converter {
@@ -149,7 +199,8 @@
 
 .weather {
     padding: 100px 0;
-    background-color: black;
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background: rgba(255, 165, 0, 0.07);
 }
 
 .inner_weather > div {

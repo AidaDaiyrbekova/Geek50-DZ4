@@ -1,36 +1,44 @@
 
 /* GMAIL BLOCK */
+body {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url('../img/bgc.jpg') no-repeat center;
+    background-size: cover;
+}
+.history_naruto {
 
-.gmail_block {
-    background: black;
     padding: 100px 0;
+    color: white;
 }
 
-.inner_gmail_block {
+.inner_history_naruto {
     margin-top: 50px;
     display: flex;
     justify-content: space-evenly;
-    border: 1px solid var(--orange);
-    height: 300px;
     border-radius: 20px;
     align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 2px solid var(--chakra);
+    box-shadow: 0 0 20px var(--chakra);
+    padding: 20px;
+    height: auto;
+    gap: 40px;
+    flex-wrap: wrap;
 }
 
-.form_gmail {
+.form_naruto {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
 
-.form_gmail button {
-    width: 100%;
-    margin: 20px 0;
 }
+/*.form_gmail button {*/
+/*    width: 100%;*/
+/*    margin: 20px 0;*/
+/*}*/
 
 /* MOVE BLOCK */
 
-.move_block {
-    background: black;
+.episodes {
     padding: 100px 0;
 }
 
@@ -39,25 +47,97 @@
     width: 400px;
     border: 1px solid var(--orange);
     border-radius: 18px;
+
 }
 
 .parent_block {
-    height: 500px;
-    width: 500px;
-    border: 1px solid var(--orange);
+    height: 700px;
+    width: 1000px;
+    box-shadow: 0 0 20px var(--chakra);
     position: relative;
     margin: 0 auto;
-}
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid var(--chakra);
+    border-radius: 25px;
+    overflow: hidden;
 
+}
 .child_block {
     position: absolute;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    background-color: red;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    transform: rotate(45deg);
+    pointer-events: auto;
 }
 
-.inner_move_block {
+.child_block::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    clip-path: polygon(
+            50% 0%, 60% 40%, 100% 50%, 60% 60%,
+            50% 100%, 40% 60%, 0% 50%, 40% 40%
+    );
+    background: radial-gradient(circle, #5c33ff 0%, #0000ff 60%, #000066 100%);
+    border-radius: 2px;
+    animation: spin 1s linear infinite, flicker 0.4s infinite alternate;
+    box-shadow:
+            0 0 6px #5c33ff,
+            0 0 15px #5c33ff,
+            0 0 30px #5c33ff;
+    filter: drop-shadow(0 0 8px #5c33ff);
+}
+
+
+@keyframes flicker {
+    0% {
+        opacity: 0.95;
+        filter: brightness(1) drop-shadow(0 0 6px #5c33ff);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(1.4) drop-shadow(0 0 12px #884dff);
+    }
+    100% {
+        opacity: 0.95;
+        filter: brightness(1) drop-shadow(0 0 6px #5c33ff);
+    }
+}
+
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.child_block::after {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    background: radial-gradient(circle, #5c33ff88 0%, transparent 70%);
+    border-radius: 50%;
+    opacity: 0.6;
+    animation: trail 0.5s infinite;
+}
+
+@keyframes trail {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(1.2);
+        opacity: 0;
+    }
+}
+
+.inner_episodes {
     margin-top: 50px;
 }
 
@@ -78,14 +158,14 @@
     position: absolute;
     width: 8px;
     height: 1px;
-    background: #fff9;
+    background: var(--chakra);
     line-height: 20px;
     transform-origin: 50%;
     z-index: 5;
     inset: 0;
     margin: auto;
     font-style: normal;
-    transform: rotate(var(--rotate)) translateX(var(--dail-size));
+    /*transform: rotate(var(--rotate)) translateX(var(--dail-size));*/
 }
 .spike:nth-child(5n+1) {
     box-shadow: -7px 0 #fff9;
@@ -96,7 +176,7 @@
     right: 22px;
     top: -10px;
     transition: 1s linear;
-    transform: rotate(calc( var(--dRotate) - var(--rotate)));
+    /*transform: rotate(calc( var(--dRotate) - var(--rotate)));*/
 }
 
 .seconds {
@@ -104,7 +184,7 @@
     --dail-size: calc((var(--clock-size)/ 2) - 8px);
     font-weight: 800;
     font-size: 18px;
-    transform: rotate(calc( -1 * var(--dRotate)));
+    /*transform: rotate(calc( -1 * var(--dRotate)));*/
     position: absolute;
     inset: 0;
     margin: auto;
@@ -114,7 +194,7 @@
 .minutes {
     --dail-size: calc((var(--clock-size)/ 2) - 65px);
     font-size: 16px;
-    transform: rotate(calc( -1 * var(--dRotate)));
+    /*transform: rotate(calc( -1 * var(--dRotate)));*/
     position: absolute;
     inset: 0;
     margin: auto;
@@ -170,7 +250,7 @@
     font-size: 80px;
     height: 100px;
     width: 100%;
-    border-bottom: 1px solid var(--orange);
+    border-bottom: 2px solid var(--orange);
     margin-top: 40px;
 }
 
@@ -183,6 +263,8 @@
 .stopwatch {
     padding: 100px 0;
     background: black;
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7))
+
 }
 
 .time_buttons {
@@ -190,13 +272,14 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+
+}
+.time_buttons button:hover {
+    background: var(--orange);
+    border: 1px solid var(--chakra);
 }
 
 /*--------CHARACTERS---------*/
-
-.characters {
-    background: var(--black);
-}
 
 .characters-list {
     padding: 100px 0;
@@ -207,7 +290,7 @@
 }
 
 .character-card {
-    border: 2px solid var(--orange);
+    border: 2px solid var(--chakra);
     padding: 10px;
     width: 250px;
     display: flex;
@@ -219,7 +302,7 @@
 .character-photo {
     width: 100%;
     height: 250px;
-    border: 2px solid var(--orange);
+    border: 2px solid var(--chakra);
     margin: 0 auto;
 }
 

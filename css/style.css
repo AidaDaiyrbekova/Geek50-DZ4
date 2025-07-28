@@ -2,13 +2,16 @@
 
 .header {
     height: 80px;
-    background: #2c2d2f;
     display: flex;
     align-items: center;
     width: 100%;
     position: fixed;
     top: 0;
     z-index: 2;
+    /*background: rgba(28, 28, 30, 0.95);*/
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5); /* Прозрачный черный */
+    backdrop-filter: blur(4px);
 }
 
 .inner_header {
@@ -27,11 +30,14 @@
     font-size: 22px;
     height: 60px;
     width: fit-content;
-    background: var(--orange);
     padding: 8px;
-    color: white;
     border-radius: 5px;
     cursor: pointer;
+    background: var(--orange);
+    color: black;
+    font-family: 'Impact', sans-serif;
+    text-shadow: 0 0 3px #fff;
+    letter-spacing: 1px;
 }
 
 /* HEADER MENU */
@@ -43,19 +49,30 @@
 }
 
 .menu_link a {
-    color: var(--orange);
     text-transform: uppercase;
+    color: var(--chakra);
+    font-weight: bold;
+    font-size: 14px;
 }
 
 .menu_link a:hover {
     text-decoration: underline;
+    color: white;
 }
 
 /* MAIN BLOCK */
 
 .main_block {
-    padding: 100px 0;
     background: black;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 150px 0 100px;
+    text-align: center;
+
+}
+
+.main_block h1 {
+    font-size: 36px;
+    text-shadow: 2px 2px 5px #000;
 }
 
 /* BUTTONS COLOR PICKER */
@@ -69,13 +86,23 @@
 .btn-color {
     border-radius: 20px;
     border-color: white !important;
+    background: var(--chakra);
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
 }
-
+.btn:hover, .btn-color:hover {
+    background: var(--chakra);
+    color: black;
+}
 /* FOOTER */
 
 .footer {
-    background: #2c2d2f;
     width: 100%;
+    background: rgba(28, 28, 30, 0.95);
 }
 
 .inner_footer {
@@ -86,8 +113,8 @@
 }
 
 .footer h2 {
+    color: var(--chakra);
     text-transform: uppercase;
-    color: var(--orange);
     font-weight: 600;
 }
 
@@ -96,7 +123,9 @@
 
 .slider_block {
     padding: 100px 0;
-    background: black;
+    /*background: black;*/
+    background: rgba(0, 0, 0, 0.7);
+
 }
 
 .slider {
@@ -104,12 +133,13 @@
     width: 100%;
     height: 300px;
     overflow: hidden;
-    border: 3px solid var(--orange);
     border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 30px;
+    background: rgba(0, 0, 0, 0.8);
+    border: 2px solid var(--chakra);
 }
 
 .slide {
@@ -123,16 +153,16 @@
 }
 
 .slide_card {
-    color: white;
     margin: 0 auto;
     width: 500px;
     text-align: center;
+    color: #ddd;
 }
 
 .slide_card h3 {
-    color: white;
     text-transform: uppercase;
     font-size: 22px;
+    color: var(--chakra);
 }
 
 .slide_card p {
@@ -153,8 +183,8 @@
 /* VIDEO BLOCK */
 
 .block_video {
-    background: black;
     padding: 100px 0;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 .inner_block_video {
@@ -186,11 +216,12 @@
     position: relative;
     width: 100%;
     padding: 40px;
-    background-color: black;
     border: 2px solid var(--orange);
     border-radius: 4px;
     max-height: 80vh;
     overflow-y: auto;
+    background: rgba(20, 20, 20, 0.9);
+    border-color: var(--chakra);
 }
 
 .modal_content form {
@@ -216,7 +247,7 @@
     text-align: center;
     font-size: 22px;
     text-transform: uppercase;
-    color: white;
+    color: var(--accent);
 }
 
 .modal_content label, .btn_min {
@@ -231,8 +262,10 @@
 /*-------BOTTLE-------*/
 
 .bottle {
-    background: black;
+    /*background: black;*/
     padding: 100px 0;
+    background: rgba(0, 0, 0, 0.7);
+
 }
 
 .bottle_inner {
@@ -247,9 +280,9 @@
     height: 300px;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
-    border: 8px solid transparent;
     animation: animate 5s linear infinite;
     transform-origin: bottom center;
+    border: 8px solid var(--chakra) transparent;
 }
 
 @keyframes animate {
@@ -338,10 +371,12 @@
     background: #1ae907;
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 150px;
-    filter: drop-shadow(0 0 80px #1ae907);
+    background: var(--chakra);
+    filter: drop-shadow(0 0 80px var(--chakra));
     transform-origin: top center;
     animation: animateliquid 5s linear infinite;
     animation-play-state: running;
+
 }
 
 @keyframes animateliquid {
@@ -376,9 +411,12 @@
     top: -10px;
     width: 100%;
     height: 20px;
-    background: #15be05;
+    background: #00eaff;
     border-radius: 50%;
-    filter: drop-shadow(0 0 80px #15be05);
+    filter: drop-shadow(0 0 80px #00eaff);
+
+
+
 }
 
 .shadow {

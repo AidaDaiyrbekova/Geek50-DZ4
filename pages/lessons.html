@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lessons</title>
+    <title>Personage</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/core.css">
     <link rel="stylesheet" href="../css/lessons.css">
@@ -15,15 +15,18 @@
             <div class="inner_header">
                 <a href="../index.html">
                     <div class="logotype">
-                        <h2>Java<span>Script</span></h2>
+                        <h2><span>Naruto</span></h2>
                     </div>
                 </a>
                 <ul class="menu">
                     <li class="menu_link">
-                        <a href="../pages/home_works.html">Home Works</a>
+                        <a href="../pages/home_works.html">About Naruto</a>
                     </li>
                     <li class="menu_link">
-                        <a href="../pages/lessons.html">Lessons</a>
+                        <a href="../pages/lessons.html">Personage</a>
+                    </li>
+                    <li class="menu_link">
+                        <a href="../pages/cards.html">Cards</a>
                     </li>
                     <li class="menu_link">
                         <a href="https://t.me/NurDinBuy16" target="_blank">Send message</a>
@@ -34,65 +37,72 @@
         </div>
     </div>
 
-    <div class="phone_block">
+    <div class="slide_photo">
         <div class="container">
-            <h3>Phone checker</h3>
-            <div class="inner_phone_block">
-                <div class="form_phone">
-                    <label for="phone_input">Phone Number</label>
-                    <input type="text" id="phone_input" placeholder="+996 XXX XX-XX-XX">
-                    <button class="btn" id="phone_button">Check number</button>
-                    <span class="checker" id="phone_result"></span>
+            <h3>Персонажи Наруто</h3>
+            <div class="slider-wrapper">
+                <button class="btn-slide" id="prev">&#8592;</button>
+                <div class="slider-container">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide_card" style="background-image: url('../img/minato.png')"></div>
+                        <div class="slide_card" style="background-image: url('../img/obito.jpg')"></div>
+                        <div class="slide_card" style="background-image: url('../img/osusuki.gif')"></div>
+                        <div class="slide_card" style="background-image: url('../img/pain.png')"></div>
+                        <div class="slide_card" style="background-image: url('../img/comand7.jpg')"></div>
+                        <div class="slide_card" style="background-image: url('../img/djiraya.png')"></div>
+                        <div class="slide_card" style="background-image: url('../img/friends.gif')"></div>
+                        <div class="slide_card" style="background-image: url('../img/itachi.png')"></div>
+                        <div class="slide_card" style="background-image: url('../img/kakashi.jpg')"></div>
+                        <div class="slide_card" style="background-image: url('../img/boi.gif')"></div>
+                        <div class="slide_card" style="background-image: url('../img/friends.gif')"></div>
+                        <div class="slide_card" style="background-image: url('../img/comand.jpg')"></div>
+                        <div class="slide_card" style="background-image: url('../img/naruto-bg.png')"></div>
+                        <div class="slide_card" style="background-image: url('../img/konoxa.png')"></div>
+                    </div>
                 </div>
+                <button class="btn-slide" id="next">&#8594;</button>
             </div>
         </div>
     </div>
 
     <div class="tab_slider">
         <div class="container">
-            <h3>tab slider</h3>
+            <h3>Кланы</h3>
             <div class="inner_tab_slider">
                 <div class="tab_contents_block">
 
                     <div class="tab_content_block">
-                        <h4>Делегирование событий</h4>
-                        <p>В JavaScript делегирование событий - это когда мы используем один обработчик событий для
-                            группы элементов, вместо того чтобы назначать отдельный обработчик каждому элементу. Когда
-                            происходит событие на одном из элементов, оно перехватывается общим обработчиком, который
-                            определяет, какой элемент вызвал событие, и выполняет соответствующие действия.</p>
+                        <h4>Кланы в Наруто</h4>
+                        <p><strong>Кланы</strong> (一族, "Ichizoku") — объединения шиноби, связанные родственными узами и стилем боя, что может подразумевать наличие Хидендзюцу, техник, секрет исполнения которых циркулирует лишь внутри клана, или же Кеккей Генкай, способностей, передающихся по наследству.
+                            Зачастую кланы населяют собственные селения, но чаще проживают в Какурезато, к пактам о создании которых присоединились.</p>
                     </div>
                     <div class="tab_content_block">
-                        <h4>classList</h4>
-                        <p>classList в JavaScript - это свойство, которое позволяет нам работать с классами элемента
-                            HTML. С помощью classList мы можем добавлять, удалять или проверять наличие классов у
-                            элемента. Допустим, у нас есть элемент на веб-странице, и мы хотим изменить его классы с
-                            помощью JavaScript. Вместо того чтобы обращаться напрямую к атрибуту class, мы можем
-                            использовать свойство classList этого элемента. </p>
+                        <h4>Учиха<img src="../img/UchihaSymb.webp" alt="UchihaSymb"></h4>
+                        <p><strong>Клан Учи́ха</strong> (うちは一族, "Uchiha Ichizoku") — один из четырёх благородных кланов Конохи[1], обретший известность из-за своего уникального Кеккей Генкай Додзюцу, Шарингана.[2] Участвовав в основании Конохагакуре в прошлом, клан становился всё более и более отдалённым от основной части селения, росла дискриминация, что вылилось в уничтожение клана Учиха.
+                            Немногие Учиха дожили до настоящего времени. </p>
                     </div>
                     <div class="tab_content_block">
-                        <h4>add()</h4>
-                        <p>Метод add позволяет добавить новый класс к списку классов элемента. Например,
-                            element.classList.add('new-class') добавит класс с именем "new-class" к элементу.</p>
+                        <h4>Сарутоби<img src="../img/Sarutobi_Symbol.svg" alt="Sarutobi_Symbol"></h4>
+                        <p><strong>Клан Саруто́би</strong> (猿飛一族, Sarutobi Ichizoku) — один из кланов Конохагакуре. Наиболее известным членом является Сарутоби Хирузен.
+                            Все Шиноби клана верят в Хи но Иши.</p>
                     </div>
                     <div class="tab_content_block">
-                        <h4>remove()</h4>
-                        <p>Метод remove позволяет удалить класс из списка классов элемента. Например,
-                            element.classList.remove('old-class') удалит класс с именем "old-class" из элемента.</p>
+                        <h4>Сенджу<img src="../img/Senju_Symbol.svg" alt="sendju_symb"></h4>
+                        <p><strong>Клан Се́нджу</strong> (千手一族, "Senju Ichizoku"), также известный как "Клан лесных Сенджу" (森の千手一族, "Mori no Senju Ichizoku")[1] — один из сильнейших кланов мира, клан-сооснователь Конохагакуре.
+                            Несмотря на то, что он больше не существует в виде клана, его влияние продолжает формировать политику Конохи.</p>
                     </div>
                     <div class="tab_content_block">
-                        <h4>contains()</h4>
-                        <p>Метод contains позволяет проверить, содержит ли элемент определенный класс. Он возвращает
-                            true, если класс присутствует, и false, если его нет. Например,
-                            element.classList.contains('highlight') вернет true, если у элемента есть класс
-                            "highlight".</p>
+                       <h4>Хьюга<img src="../img/Hyūga_Symbol.svg" alt="Hyūga_Symbol"></h4>
+                        <p><strong>Клан Хью́га</strong> (日向閥族, Hyuuga Ichizoku) — один из четырёх благородных кланов Конохагакуре но Сато.[1] Все члены клана с рождения обладают Бьякуганом, Кеккей Генкай, предоставляющим им расширенное поле зрения и возможность видеть сквозь твёрдые предметы, а также систему чакры живых существ.
+                            Члены клана Хьюга обладают уникальной способностью высвобождать чакру в любом тенкетсу в их телах.</p>
                     </div>
 
                     <div class="tab_content_items">
-                        <div class="tab_content_item tab_content_item_active">Делегирование событий</div>
-                        <div class="tab_content_item">Class List</div>
-                        <div class="tab_content_item">add()</div>
-                        <div class="tab_content_item">remove()</div>
-                        <div class="tab_content_item">contains()</div>
+                        <div class="tab_content_item tab_content_item_active">Кланы в Наруто</div>
+                        <div class="tab_content_item">Клан Учиха</div>
+                        <div class="tab_content_item">Клан Сарутоби</div>
+                        <div class="tab_content_item">Клан Сенджу</div>
+                        <div class="tab_content_item">Клан Хьюга</div>
                     </div>
 
                 </div>
@@ -152,9 +162,9 @@
 
     <div class="footer">
         <div class="container">
-            <a href="https://www.instagram.com/nurdinbuy/" target="_blank">
+            <a href="https://www.instagram.com/o.n.l.y_f.o.r.w.a.r.d/" target="_blank">
                 <div class="inner_footer">
-                    <h2>Made by NurDinBuy</h2>
+                    <h2>Made by AnimeGirl</h2>
                 </div>
             </a>
         </div>
